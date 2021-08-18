@@ -1,10 +1,10 @@
+# This series will show you how to create websites with python using the micro framework flask
 from flask import Flask, redirect, url_for
-
 app = Flask(__name__)
 
 @app.route("/")   #define como acessar esta página específica (poderia ser /home)
 def home():
-    return "Hello! This is the main page <h1> HELLO <h1>"
+    return "Hello! This is the main page <h1> HELLO </h1>"
 
 @app.route("/<name>")
 def user(name):
@@ -15,4 +15,4 @@ def admin():
     return redirect(url_for("home"))
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
