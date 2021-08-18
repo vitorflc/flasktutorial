@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    </head>
+    <body>
+    <!--Para comentar coisas no HTML-->
+    <!-- Básicos -->
+        <h1>Home Page!</h1>
+        <p>Online user for the session: <h3> <b>{{content}}</b> </h3> </p>
+        <p>{{r}}</p>
+
+        {% for x in range(0,10): %}    <!-- perguntar dos dois pontos e do 'endif' -->
+            <p> Fuck you {{x}} times. </p>
+        {% endfor %}                    <!-- indent não funciona? -->
+        {% for x in content %}
+            {% if x == "Bugatti" %}
+                <p>My dream car is {{x}}.</p>
+            {% else %}
+                <p>My dream car isn't {{x}}. </p>
+            {% endif %}    <!-- LEMBRAR DE FECHAR OS LAÇOS (ENDIF ENDFOR) -->
+        {% endfor %}
+    </body>
+</html>
